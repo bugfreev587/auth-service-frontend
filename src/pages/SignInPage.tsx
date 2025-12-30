@@ -9,8 +9,7 @@ export default function SignInPage() {
         <h1>Welcome Back</h1>
         <p className="auth-subtitle">Sign in to your account</p>
         <SignIn 
-          routing="path" 
-          path="/sign-in"
+          routing="virtual"
           signUpUrl="/sign-up"
         />
         <p className="auth-switch">
