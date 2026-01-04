@@ -37,6 +37,9 @@ export default function Navbar() {
 
         {/* Center Navigation */}
         <div className="navbar-center">
+          <Link to="/dashboard" className="navbar-link">
+            Dashboard
+          </Link>
           <Link to="/features" className="navbar-link">
             Features
           </Link>
@@ -82,11 +85,11 @@ export default function Navbar() {
                   </div>
                   <div className="user-menu-divider"></div>
                   <Link
-                    to="/dashboard"
+                    to="/profile"
                     className="user-menu-item"
                     onClick={() => setShowUserMenu(false)}
                   >
-                    Dashboard
+                    Profile
                   </Link>
                   <div className="user-menu-divider"></div>
                   <SignOutButton>

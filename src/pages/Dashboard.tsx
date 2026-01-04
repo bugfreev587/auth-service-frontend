@@ -13,7 +13,7 @@ interface APIKey {
 }
 
 export default function Dashboard() {
-  const { user, isLoaded } = useUser()
+  const { isLoaded } = useUser()
   const [apiKey, setApiKey] = useState<APIKey | null>(null)
   const [isGenerating, setIsGenerating] = useState(false)
   const [error, setError] = useState<string | null>(null)
@@ -132,26 +132,6 @@ export default function Dashboard() {
       <div className="page-content">
         <div className="dashboard-card">
           <h1>Dashboard</h1>
-          <div className="user-info">
-            <h2>Welcome, {user?.firstName || user?.emailAddresses[0]?.emailAddress || 'User'}!</h2>
-            {user?.imageUrl && (
-              <img 
-                src={user.imageUrl} 
-                alt="Profile" 
-                className="profile-image"
-              />
-            )}
-            <div className="user-details">
-              <p><strong>Email:</strong> {user?.emailAddresses[0]?.emailAddress}</p>
-              {user?.firstName && (
-                <p><strong>First Name:</strong> {user.firstName}</p>
-              )}
-              {user?.lastName && (
-                <p><strong>Last Name:</strong> {user.lastName}</p>
-              )}
-              <p><strong>User ID:</strong> {user?.id}</p>
-            </div>
-          </div>
 
           {/* API Key Management Section */}
           <div className="api-key-section">
